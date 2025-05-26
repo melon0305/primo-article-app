@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/articleListFragment">
+
+    <fragment
+        android:id="@+id/articleListFragment"
+        android:name="test.primo.primofeedapp.presentation.screen.list.ArticleListFragment"
+        tools:layout="@layout/fragment_article_list"
+        android:label="ArticleListFragment" >
+        <action
+            android:id="@+id/action_articleListFragment_to_articleDetailFragment"
+            app:destination="@id/articleDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="test.primo.primofeedapp.presentation.screen.detail.ArticleDetailFragment"
+        android:label="ArticleDetailFragment" >
+
+        <argument
+            android:name="content"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>
